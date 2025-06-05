@@ -1,0 +1,312 @@
+/* Basic Reset & Body Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    color: #ffd700;
+    padding: 0.8rem 0;
+    text-align: center;
+    border-bottom: 2px solid #ffd700;
+}
+
+/* Logo Styling */
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+/* Slogan Styling */
+.logo-slogan {
+    color: #e0e0e0;
+    font-size: 1.1em;
+    margin: 5px auto 10px auto;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    max-width: 80%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #ffd700, #ffec8b, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffd700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+header p {
+    font-size: 1.3em;
+    margin-top: 0.8rem;
+    color: #c0c0c0;
+}
+
+/* Main Content Area */
+main {
+    padding: 25px; /* Adjust as desired, possibly more like 50px 40px as discussed */
+    max-width: 1200px; /* Adjust as desired, possibly more like 1400px as discussed */
+    margin: 30px auto; /* Adjust as desired, possibly more like 40px auto as discussed */
+    background-color: #282828;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 50px; /* Adjust as desired, possibly more like 70px as discussed */
+}
+
+section h2 {
+    text-align: center;
+    background: linear-gradient(to right, #ffd700, #ffec8b, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #ffd700;
+    text-shadow: 0 0 3px rgba(255, 215, 0, 0.4);
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Introduction Section */
+#introduction p {
+    text-align: center;
+    max-width: 850px; /* Adjust as desired, possibly more like 1000px as discussed */
+    margin: 0 auto 40px auto; /* Adjust as desired, possibly more like 50px auto as discussed */
+    font-size: 1.2em; /* Adjust as desired, possibly more like 1.3em as discussed */
+    color: #e0e0e0;
+}
+
+/* Portfolio Grid Styles */
+.portfolio-grid {
+    max-width: 1200px; /* Adjust as desired, possibly more like 1200px as discussed */
+    margin: 0 auto;
+}
+
+/* --- NEW BLOCK TO ADD: Portfolio Image Wrapper Styles --- */
+.portfolio-image-wrapper {
+    width: 50%; /* This sets the horizontal space for the image. */
+    position: relative;
+    padding-bottom: 45%; /* Creates a square container (1:1 aspect ratio) */
+    overflow: hidden; /* Essential for rounded corners and object-fit */
+    border-radius: 30px; /* Default for odd items: rounded left corners */
+}
+
+.portfolio-image-wrapper img {
+    position: absolute; /* Allows image to fill its wrapper */
+    top: 0;
+    left: 0;
+    width: 100%; /* Image fills the wrapper's width */
+    height: 100%; /* Image fills the wrapper's height */
+    object-fit: cover; /* Ensures image covers the area without distorting */
+    display: block; /* Essential for proper rendering */
+}
+
+.portfolio-item {
+    background-color: #3a3a3a;
+    border: 1px solid #555;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: stretch;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Style for the content area of the portfolio item */
+.portfolio-content {
+    width: 55%; /* Sets horizontal space for text content. 45% (img) + 55% (content) = 100% */
+    background-color: #3a3a3a;
+    border: 1px solid #555; /* Re-add the border that was on the whole item */
+    border-left: none; /* Remove left border so it connects to the main item border */
+    border-radius: 12px; /* Overall border-radius */
+    border-top-left-radius: 0; /* Ensures inner corner is square where image meets content */
+    border-bottom-left-radius: 0;
+    padding: 40px; /* Simplified padding for all sides now */
+    /* REMOVE: margin-left: -100px; */
+    /* REMOVE: z-index: 2; */
+    display: flex; /* Keep flex to stack title/description vertically */
+    flex-direction: column; /* Keep column for vertical stacking */
+    justify-content: center;
+    text-align: center;
+    box-shadow: none; /* Remove extra shadow from the overlapping effect */
+}
+
+.portfolio-item h3 {
+    margin-top: -300px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.portfolio-item p {
+    margin-bottom: 0;
+    font-size: 1.1em;
+    color: #c0c0c0;
+    text-align: center;
+}
+
+.portfolio-item:nth-child(even) {
+    flex-direction: row-reverse; /* Keep this to alternate positions */
+}
+
+.portfolio-item:nth-child(even) .portfolio-image-wrapper { /* Targets the image wrapper */
+    /* REMOVE: z-index: 2; */
+    border-radius: 30px; /* Rounded top-right, bottom-right corners */
+}
+
+.portfolio-item:nth-child(even) .portfolio-content { /* Targets the content box */
+    /* REMOVE: margin-left: 0; */
+    /* REMOVE: margin-right: -100px; */
+    /* REMOVE: z-index: 1; */
+    padding: 40px; /* Keep simplified padding */
+    border-left: 1px solid #555; /* Add left border for separation on even items */
+    border-right: none; /* Remove right border */
+    border-top-right-radius: 0; /* Square inner corner */
+    border-bottom-right-radius: 0;
+}
+
+
+/* Social Links Styles */
+.social-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-links a {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #000000;
+    padding: 12px 25px;
+    margin: 0 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: #e0b800;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: #c0c0c0;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 50px;
+    border-top: 2px solid #ffd700;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    #introduction p {
+        font-size: 1.1em;
+    }
+
+    .portfolio-item {
+        flex-direction: column; /* Stack image and content vertically on mobile */
+        margin-bottom: 40px;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .portfolio-image-wrapper {
+        width: 100%; /* Image takes full width on mobile */
+        padding-bottom: 60%; /* Keep aspect ratio for mobile */
+        border-radius: 30px; /* Rounded top corners only */
+    }
+
+    .portfolio-image-wrapper img {
+        width: 100%; /* Image fills its wrapper */
+        height: 100%; /* Image fills its wrapper */
+        object-fit: cover;
+    }
+
+    .portfolio-content {
+        width: 100%; /* Content takes full width on mobile */
+        padding: 100px;
+        border-radius: 0 0 10px 10px; /* Rounded bottom corners only */
+        border-left: none; /* Ensure no left border on mobile */
+        border-right: none; /* Ensure no right border on mobile */
+    }
+
+    .portfolio-item h3 {
+        white-space: normal; /* Allow titles to wrap on mobile */
+        text-overflow: clip; /* Remove ellipsis on mobile */
+        font-size: 1.6em;
+    }
+
+    .portfolio-item p {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    /* Reset order for even items on mobile */
+    .portfolio-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .portfolio-item:nth-child(even) .portfolio-image-wrapper {
+        border-radius: 10px 10px 0 0; /* Ensure same top-left/top-right rounding */
+    }
+
+    .portfolio-item:nth-child(even) .portfolio-content {
+        border-radius: 0 0 10px 10px; /* Ensure same bottom-left/bottom-right rounding */
+    }
+    
+    .social-links a {
+        display: block;
+        margin: 10px auto;
+        max-width: 250px;
+    }
+}
