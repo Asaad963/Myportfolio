@@ -1,0 +1,285 @@
+/* Basic styling for the main content area of project pages */
+.project-detail-main {
+    padding: 60px 40px; /* Increased padding for more breathing room */
+    max-width: 1000px; /* Max width for content */
+    margin: 40px auto; /* Center the content with top/bottom margin */
+    background-color: #282828; /* Consistent background with main portfolio page */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box; /* Essential for padding/width calculation */
+}
+
+.project-page-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif; /* Ensure font is consistent */
+    color: #f0f0f0; /* Default text color */
+    /* Background color will be set by the theme classes */
+}
+
+/* Header for Project Pages */
+header {
+    background-color: #000000;
+    color: #ffd700;
+    padding: 15px 40px; /* Adjusted padding */
+    border-bottom: 2px solid #ffd700;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space out logo and nav links */
+    align-items: center; /* Vertically center content */
+    flex-wrap: wrap; /* Allows header items to wrap on smaller screens */
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between; /* Spreads out logo and nav-links */
+    align-items: center;
+    width: 100%; /* Make main-nav take full width of header */
+}
+
+.logo-text { /* Styling for "ASAAD'S PORTFOLIO" link */
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffd700;
+    text-decoration: none;
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-back-btn { /* Style for the new back button in the header */
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffd700; /* Your highlight color */
+    color: #1a1a1a; /* Dark text for contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* Space from logo */
+}
+
+.header-back-btn:hover {
+    background-color: #e0b0d0; /* A slightly darker or different hover color */
+}
+
+
+.project-hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project-hero h1 {
+    font-size: 4.5em; /* Main project title size, keep it large */
+    color: #ffd700; /* Default color, overridden by theme classes */
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    /* Ensure no conflicting gradient/stroke from global style.css if it exists */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: unset;
+}
+
+.project-hero .project-tagline {
+    font-size: 1.2em;
+    color: #c0c0c0;
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center the tagline */
+}
+
+.project-overview {
+    margin-bottom: 50px;
+}
+
+.project-overview h2,
+.project-gallery h2 {
+    font-size: 2.2em; /* Consistent size for section headings */
+    color: #fff; /* Default color, can be themed if needed */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    text-align: center; /* Ensure headings are centered */
+    text-transform: uppercase; /* Makes them all caps */
+    letter-spacing: 1px;
+}
+
+.project-overview p {
+    font-size: 1.1em;
+    color: #c0c0c0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center; /* Crucial: ensures paragraph is centered */
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin-left: auto; /* Centers the paragraph block */
+    margin-right: auto; /* Centers the paragraph block */
+}
+
+.gallery-grid {
+    display: grid;
+    /* Adjusted minmax for more flexible columns, allowing smaller images to fit */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Increased gap for better spacing between images */
+    justify-items: center; /* Centers grid items horizontally within their cells */
+    align-items: start; /* Aligns grid items to the top of their cells vertically */
+    padding: 0 20px;
+    max-width: 900px; /* Constrain the overall gallery grid width */
+    margin: 0 auto; /* Center the grid itself on the page */
+}
+
+.gallery-grid img {
+    width: 100%;
+    max-width: 100%; /* Ensures images don't exceed their grid cell */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+    display: block; /* Ensures no extra space below image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+.call-to-action {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1.2em;
+}
+
+.back-link { /* This is for the "Want to see more?" link */
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.3s ease;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer (Assuming basic footer structure is in style.css, otherwise uncomment below) */
+footer {
+    background-color: #000000;
+    color: #c0c0c0;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 50px;
+    border-top: 2px solid #ffd700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Fallback for text */
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.footer-back-link { /* Styling for footer back link */
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffd700;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+.footer-back-link:hover {
+    background-color: #e0b0d0;
+}
+
+
+/* --- THEME-SPECIFIC STYLES --- */
+
+/* Hugo Boss Theme */
+.hugo-boss-theme {
+    background-color: #2a2a2a; /* Slightly different dark background */
+}
+.hugo-boss-theme .project-hero h1 {
+    color: #e0b0d0; /* A soft magenta/purple accent */
+}
+
+/* Ford Mustang GTD Theme */
+.mustang-gtd-theme {
+    background-color: #1a1a1a; /* Even darker, sleek background */
+}
+.mustang-gtd-theme .project-hero h1 {
+    color: #ff4500; /* A vibrant orange/red for high performance */
+}
+
+/* Coffee Shop Theme */
+.coffee-shop-theme {
+    background-color: #3b2a26; /* Warm, coffee-like brown */
+}
+.coffee-shop-theme .project-hero h1 {
+    color: #daa520; /* A golden-brown accent */
+}
+
+/* Ecobloom Theme */
+.ecobloom-theme {
+    background-color: #2a3a2a; /* Earthy green tone */
+}
+.ecobloom-theme .project-hero h1 {
+    color: #90ee90; /* A soft light green accent */
+}
+
+
+/* Responsive adjustments for project pages */
+@media (max-width: 768px) {
+    .project-detail-main {
+        padding: 20px; /* Reduced padding on mobile */
+        margin: 20px auto;
+    }
+    header {
+        padding: 15px 20px; /* Adjust header padding */
+        flex-direction: column; /* Stack logo and nav links */
+        align-items: center;
+    }
+    .main-nav {
+        flex-direction: column; /* Stack logo and nav links within nav */
+        align-items: center;
+    }
+    .logo-text {
+        margin-bottom: 10px; /* Space between logo and back button */
+    }
+    .nav-links {
+        margin-top: 10px; /* Space from logo */
+    }
+    .project-hero h1 {
+        font-size: 2.8em; /* Adjust for mobile view to prevent overflow */
+        padding: 0 10px; /* Add horizontal padding to prevent text overflow */
+    }
+    .project-hero .project-tagline {
+        font-size: 1.1em;
+        padding: 0 15px; /* Add horizontal padding */
+    }
+    .project-overview h2,
+    .project-gallery h2 {
+        font-size: 1.8em; /* Adjusted section titles */
+        padding: 0 10px;
+    }
+    .project-overview p {
+        font-size: 1em;
+        padding: 0 15px; /* Add horizontal padding to description */
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .gallery-grid img {
+        max-width: 90%; /* Ensure images don't stretch too wide on small screens */
+    }
+    .call-to-action {
+        font-size: 1.1em;
+        margin-top: 40px;
+    }
+}
