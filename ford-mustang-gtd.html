@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ford Mustang GTD - Asaad's Portfolio</title> <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="project-page-styles.css"> </head>
+    <title>Ford Mustang GTD - Asaad's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page-styles.css">
+</head>
 <body class="project-page-body mustang-gtd-theme">
     <header>
         <nav class="main-nav">
-            <a href="index.html" class="logo">ASAAD'S PORTFOLIO</a>
+            <span class="logo-text">AB Designs</span> 
+            <div class="nav-links">
+                <a href="index.html" class="header-back-btn">Back to Portfolio</a>
+            </div>
         </nav>
     </header>
 
     <main class="project-detail-main">
         <section class="project-hero">
-            <h1>Ford Mustang GTD Design Study</h1> <p class="project-tagline">High-Performance Automotive Visuals</p> </section>
+            <h1>Ford Mustang GTD Design Study</h1>
+            <p class="project-tagline">High-Performance Automotive Visuals</p>
+        </section>
 
         <section class="project-overview">
             <h2>Overview</h2>
-            <p>Detailed description of the project. What was the challenge? What was your role? What techniques did you use?</p>
-            </section>
+            <p>This project delves into visual dynamics and high-performance branding, capturing the raw power and refined elegance of an iconic automotive legend. The challenge was to convey speed, sophistication, and cutting-edge design through a series of conceptual visuals. My role involved conceptualizing the visual narrative, utilizing advanced rendering techniques, and focusing on intricate details to bring the GTD's formidable presence to life. Techniques included photorealistic rendering, dynamic lighting, and precise material simulation to emphasize its luxury and performance aspects.</p>
+        </section>
 
         <section class="project-gallery">
             <h2>More Designs</h2>
@@ -35,9 +43,14 @@
     </main>
 
     <footer>
-    <p>&copy; 2025 Asaad's Portfolio. All rights reserved.</p>
-    <p><a href="index.html" class="footer-back-link">Back to Portfolio</a></p> </footer>
+        <p>&copy; 2025 Asaad's Portfolio. All rights reserved.</p>
+    </footer>
 
+    <div id="imageModal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="zoomedImage" src="" alt="Zoomed Image">
+    </div>
 
+    <script src="zoom.js"></script> 
 </body>
 </html>

@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop - Asaad's Portfolio</title> <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="project-page-styles.css"> </head>
-<body class="project-page-body coffee-shop-theme"> <header>
+    <title>Coffee Shop - Asaad's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page-styles.css">
+</head>
+<body class="project-page-body coffee-shop-theme">
+    <header>
         <nav class="main-nav">
-            <a href="index.html" class="logo">ASAAD'S PORTFOLIO</a>
+            <span class="logo-text">AB Designs</span> 
+            <div class="nav-links">
+                <a href="index.html" class="header-back-btn">Back to Portfolio</a>
+            </div>
         </nav>
     </header>
 
     <main class="project-detail-main">
         <section class="project-hero">
-            <h1>Urban Coffee Shop Branding</h1> <p class="project-tagline">Crafting a Welcoming Brand Identity</p> </section>
+            <h1>Coffee Shop Branding</h1>
+            <p class="project-tagline">Crafting a Welcoming Brand Identity</p>
+        </section>
 
         <section class="project-overview">
             <h2>Overview</h2>
-            <p>Detailed description of the project. What was the challenge? What was your role? What techniques did you use?</p>
-            </section>
+            <p>This project focuses on product aesthetics and brand identity, showcasing how innovative design can elevate a classic. It delves into visual dynamics and high-performance branding, capturing the raw power and refined elegance of an iconic automotive legend. The goal was to craft a warm and inviting visual identity, including logo design, typography, and atmospheric elements. Designing for a greener future, this project explores sustainable packaging and brand messaging for an eco-conscious product line, emphasizing natural appeal and environmental responsibility.</p>
+        </section>
 
         <section class="project-gallery">
             <h2>More Designs</h2>
@@ -26,6 +35,8 @@
                 <img src="root/coffee 3.jpg" alt="Coffee Shop Detail 3">
                 <img src="root/1 coffee.jpg" alt="Coffee Shop Detail 1">
                 <img src="root/coffee 2.jpg" alt="Coffee Shop Detail 2">
+                <img src="root/coffee 6.jpg" alt="Coffee Shop Detail 6">
+                <img src="root/coffee 5.jpg" alt="Coffee Shop Detail 5">
             </div>
         </section>
 
@@ -35,10 +46,14 @@
     </main>
 
     <footer>
-    <p>&copy; 2025 Asaad's Portfolio. All rights reserved.</p>
-    <p><a href="index.html" class="footer-back-link">Back to Portfolio</a></p>
- </footer>
+        <p>&copy; 2025 Asaad's Portfolio. All rights reserved.</p>
+    </footer>
 
+    <div id="imageModal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="zoomedImage" src="" alt="Zoomed Image">
+    </div>
 
+    <script src="zoom.js"></script> 
 </body>
 </html>
