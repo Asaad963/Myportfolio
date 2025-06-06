@@ -105,7 +105,7 @@ section h2 {
     position: relative;
     padding-bottom: 45%; /* Creates a square container (1:1 aspect ratio) */
     overflow: hidden; /* Essential for rounded corners and object-fit */
-    border-radius: 30px; /* Default for odd items: rounded left corners */
+    border-radius: 20px; /* Default for odd items: rounded left corners */
 }
 
 .portfolio-image-wrapper img {
@@ -121,7 +121,7 @@ section h2 {
 .portfolio-item {
     background-color: #3a3a3a;
     border: 1px solid #555;
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -144,7 +144,7 @@ section h2 {
     background-color: #3a3a3a;
     border: none; /* Re-add the border that was on the whole item */
     border-left: none; /* Remove left border so it connects to the main item border */
-    border-radius: 12px; /* Overall border-radius */
+    border-radius: 20px; /* Overall border-radius */
     border-top-left-radius: 0; /* Ensures inner corner is square where image meets content */
     border-bottom-left-radius: 0;
     padding: 40px; /* Simplified padding for all sides now */
@@ -182,7 +182,7 @@ section h2 {
 
 .portfolio-item:nth-child(even) .portfolio-image-wrapper { /* Targets the image wrapper */
     /* REMOVE: z-index: 2; */
-    border-radius: 30px; /* Rounded top-right, bottom-right corners */
+    border-radius: 20px; /* Rounded top-right, bottom-right corners */
 }
 
 .portfolio-item:nth-child(even) .portfolio-content { /* Targets the content box */
@@ -209,7 +209,7 @@ section h2 {
     color: #000000;
     padding: 12px 25px;
     margin: 0 12px;
-    border-radius: 5px;
+    border-radius: 55px;
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -261,14 +261,14 @@ footer p {
     .portfolio-item {
         flex-direction: column; /* Stack image and content vertically on mobile */
         margin-bottom: 40px;
-        border-radius: 12px;
+        border-radius: 20px;
         position: relative;
     }
 
     .portfolio-image-wrapper {
         width: 100%; /* Image takes full width on mobile */
         padding-bottom: 100%; /* Keep aspect ratio for mobile */
-        border-radius: 10px; /* Rounded top corners only */
+        border-radius: 20px; /* Rounded top corners only */
     }
 
     .portfolio-image-wrapper img {
@@ -283,7 +283,7 @@ footer p {
     .portfolio-content {
         width: 100%; /* Content takes full width on mobile */
         padding: 25px;
-        border-radius: 0 0 12px 12px; /* Rounded bottom corners only */
+        border-radius: 20px; /* Rounded bottom corners only */
         border-left: none; /* Ensure no left border on mobile */
         border-right: none; /* Ensure no right border on mobile */
         display: flex;
@@ -323,11 +323,11 @@ footer p {
     }
 
     .portfolio-item:nth-child(even) .portfolio-image-wrapper {
-        border-radius: 10px 10px 0 0; /* Ensure same top-left/top-right rounding */
+        border-radius: 20px; /* Ensure same top-left/top-right rounding */
     }
 
     .portfolio-item:nth-child(even) .portfolio-content {
-        border-radius: 0 0 10px 10px; /* Ensure same bottom-left/bottom-right rounding */
+        border-radius: 20px; /* Ensure same bottom-left/bottom-right rounding */
     }
     
     .social-links a {
